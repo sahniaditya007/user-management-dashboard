@@ -1,0 +1,33 @@
+:root {
+    --primary: #2A5C82;
+    --secondary: #5C9CE5;
+    --accent: #FF6B6B;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+  }
+  
+  .custom-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 50%;
+  }
