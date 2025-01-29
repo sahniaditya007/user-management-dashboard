@@ -9,6 +9,7 @@ export default {
             return response.data;
         } catch (error) {
             throw new Error('Failed to fetch users');
+        }
         },
         async createUser(userdata){
             try {
@@ -31,7 +32,6 @@ export default {
                 await axios.delete(`${API_URL}/${userId}`);
             } catch (error) {
                 throw new Error ('User deletion failed');
-            }
         }
     }
 }
