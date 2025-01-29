@@ -18,17 +18,17 @@ export default {
                 throw new Error('User creation failed');
             }
         },
-        async updateUser(UserId, updateData){
+        async updateUser(userId, updatedData){
             try {
-                const response = await axios.put('${API_URL}/${userId}', updatedData);
+                const response = await axios.put(`${API_URL}/${userId}`, updatedData);
                 return response.data;
             } catch (error) {
                 throw new Error('User update failed');
             }
         },
-        asysnc deleteUser(userId){
+        async deleteUser(userId){
             try {
-                await axios.delete('${API_URL}/${userId}');
+                await axios.delete(`${API_URL}/${userId}`);
             } catch (error) {
                 throw new Error ('User deletion failed');
             }
