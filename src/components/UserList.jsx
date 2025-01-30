@@ -2,8 +2,9 @@ import {useEffect, useState} from 'react';
 import { Container, Row, Col, Card, Button, Alert, Spinner } from 'react-bootstrap';
 import { UilPlus, UilEdit, UilTrashAlt } from '@iconscout/react-unicons';
 import UserService from '../services/UserService';
-import UserFrom from './UserFrom';
 import Modal from './CustomModal';
+import UserForm from "./UserForm";
+
 
 export default function UserList(){
 
