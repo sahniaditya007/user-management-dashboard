@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button, FloatingLabel, Alert } from "react-bootstrap";
 import { UilCheck } from "@iconscout/react-unicons";
-import UserService from "../services/UserService";
-import { validateEmail, validateRequired } from "../utils/validators";
+import UserService from "../services/userService";
+import { validateEmail, validateRequired } from "../utils/validation";
 
 export default function UserForm({ user, onSuccess }) {
   const [formData, setFormData] = useState({

@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import { Container, Row, Col, Card, Button, Alert, Spinner } from 'react-bootstrap';
 import { UilPlus, UilEdit, UilTrashAlt } from '@iconscout/react-unicons';
-import UserService from '../services/UserService';
+import UserService from '../services/userService';
 import Modal from './CustomModal';
 import UserForm from "./UserForm";
 
@@ -32,7 +32,7 @@ export default function UserList(){
     const handleDelete = async (userId) => {
         try {
             await UserService.deleteUser(userId);
-            setUser(user.filter(user => user.id != userId));
+            setUsers(user.filter(user => user.id != userId));
         } catch (err) {
             setError(err.message);
         }
